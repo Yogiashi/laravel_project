@@ -3,7 +3,7 @@
 <div class="row">
     <div class="mt-5 col-md-5 mx-auto">
         <div class="card">
-            <h2 class="card-header text-center text-light bg-dark">カテゴリ編集フォーム</h2>
+            <h2 class="card-header text-center text-light bg-dark">カテゴリ編集</h2>
             <div class="card-body text-center">
                 <form action="{{ route('categoryUpdate') }}" method="POST">
                 @csrf
