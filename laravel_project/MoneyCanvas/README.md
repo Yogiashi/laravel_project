@@ -2,11 +2,11 @@
 ![Alt text](Toppage.png)
 
 ## サイト概要
-日々の収支管理、予算の設定ができるシンプルな家計簿サービス。好きな色でオリジナル家計簿を作成。
+日々の収支管理、予算の設定ができるシンプルな家計簿サービス。好きな色でオリジナル家計簿を作成。各期間(今年、今月、今週)の収支状況が一目で分かるシンプルデザイン。
 <br>
 <br>
 ## 動作デモ
-(https://demoair.wondershare.com/dashboard/video/share?id=12a3567a-c857-4dcc-8099-4c18b57786bc")
+(https://demoair.wondershare.com/dashboard/video/share?id=12a3567a-c857-4dcc-8099-4c18b57786bc)
 <br>
 <br>
 ## 機能
