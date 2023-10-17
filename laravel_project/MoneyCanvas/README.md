@@ -1,7 +1,16 @@
-#MoneyCanvas
+# MoneyCanvas
+![Alt text](Toppage.png)
 
-##サイト概要
-日々の収支管理、予算の設定ができるシンプルな家計簿サービス。
-
-##動画デモ
-<iframe src="https://demoair.wondershare.com/dashboard/video/share?id=12a3567a-c857-4dcc-8099-4c18b57786bc" width="1200" height="720"></iframe>
+## サイト概要
+日々の収支管理、予算の設定ができるシンプルな家計簿サービス。好きな色でオリジナル家計簿を作成。
+<br>
+<br>
+## 動作デモ
+(https://demoair.wondershare.com/dashboard/video/share?id=12a3567a-c857-4dcc-8099-4c18b57786bc")
+<br>
+<br>
+## 機能
+・収入と支出の記録<br>
+・予算の作成<br>
+・カテゴリ検索(カテゴリ毎の収支表示)<br>
+・期間検索(年間・月間・週間別の収支表示)
