@@ -146,6 +146,13 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'type' => '収入/支出',
+        'date' => '日付',
+        'amount' => '金額',
+        'name' => 'カテゴリ名',
+        'month' => '予算月',
+        'category_id' => 'カテゴリ',
+    ],
 
 ];

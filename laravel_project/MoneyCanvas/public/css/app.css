@@ -51,6 +51,23 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.table td {
+  vertical-align: middle; /* 垂直方向に中央揃え */
+}
+
+.slant-bg::before {
+content: '';
+position: fixed;
+height: 100%;
+top: 50px;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: #2b2b2b;
+transform: skewY(-30deg);
+z-index: -1;
+}
+
 article,
 aside,
 figcaption,
