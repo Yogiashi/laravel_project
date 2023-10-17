@@ -8,6 +8,15 @@ class Budget extends Model
 {
     //
     protected $table = 'budgets';
+
+    protected static function boot() {
+        parent::boot();
+
+        static::deleting(function($budget) {
+            $budget->category->delete(); // カテゴリを削除
+        });
+    }
+    
     protected $fillable =
     [
         'user_id',

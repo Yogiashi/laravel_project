@@ -20,7 +20,7 @@ services:
     image: mysql:5.7 
     container_name: db
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: database
       MYSQL_USER: db-user
       MYSQL_PASSWORD:

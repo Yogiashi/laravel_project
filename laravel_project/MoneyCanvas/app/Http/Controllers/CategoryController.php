@@ -19,7 +19,7 @@ class CategoryController extends Controller
     //カテゴリー登録画面
     public function new() {
         $user = auth()->id();
-        $categories = Category::where('user_id', $user)->get();
+        $categories = Category::where('user_id', $user)->orderBy('created_at', 'desc')->get();
         return view('category.new', compact('categories'));
     }
 
@@ -71,10 +71,11 @@ class CategoryController extends Controller
     public function delete($id) {
         $category = Category::find($id);
         // カテゴリが使用されている場合は削除できない
-        if ($category->records->count() > 0) {
+        if ($category->record->count() > 0) {
             return redirect()->route('categoryNew')->with('flash_message', 'このカテゴリに関連する記録が存在するため削除できません');
         }
         try {
+            $category->budget()->delete();
             Category::destroy($id);
         }catch(\Throwable $e) {
             abort(500);

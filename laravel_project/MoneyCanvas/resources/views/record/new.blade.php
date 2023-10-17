@@ -35,7 +35,7 @@
                         <select name="category_id" id="category" size="1" class="form-control">
                             <option value="" selected>選択してください</option>
                             @foreach($categories as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{$category->name}}</option>
                             @endforeach
                         </select>
                         @if ($errors->has('category_id'))

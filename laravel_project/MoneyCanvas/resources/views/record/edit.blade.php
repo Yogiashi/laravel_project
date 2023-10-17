@@ -29,7 +29,7 @@
                         <label for="category">カテゴリ</label>
                         <select name="category_id" id="category" size="1" required class="form-control">
                             @foreach($categories as $category)
-                            <option value="{{ $category->id }}" @if(old('category_id', $category->id) == $category->id) selected @endif>{{$category->name}}</option>
+                                <option value="{{ $category->id }}" {{ old('category_id', $record->category_id) == $category->id ? 'selected' : '' }}>{{$category->name}}</option>
                             @endforeach
                         </select>
                     </div>
