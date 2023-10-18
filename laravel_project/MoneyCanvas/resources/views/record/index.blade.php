@@ -24,8 +24,8 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-5 col-md-7 mx-auto my-3">
+    <div class="row align-items-center my-3">
+        <div class="col-5 col-md-9 offset-md-2">
             <form method="POST" action="{{ route('search') }}">
                 {{method_field('get')}}
                 <label for="category_id">カテゴリ:</label>
@@ -42,6 +42,7 @@
                 <button type="submit" class="btn btn-secondary mt-2 mt-md-0">検索</button>
             </form>
         </div>
+        <div class=""><a href="/record/new" class="btn btn-primary p-2">記録する</a></div>
     </div>
     <div class="row">
         <div class="col-12">
