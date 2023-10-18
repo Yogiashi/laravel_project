@@ -37,7 +37,7 @@ class CategoryController extends Controller
             abort(500);
         }
      
-        return redirect(route('categoryNew'))->with('flash_massage', '登録完了しました。');
+        return redirect(route('categoryNew'))->with('flash_message', 'カテゴリを登録しました。');
     }
 
     // カテゴリー編集画面
@@ -64,7 +64,7 @@ class CategoryController extends Controller
             abort(500);
         }
 
-        return redirect(route('categoryNew'))->with('flash_message', 'カテゴリーを更新しました。');
+        return redirect(route('categoryNew'))->with('flash_message', 'カテゴリを更新しました。');
     }
 
     // 記録を削除
@@ -80,6 +80,6 @@ class CategoryController extends Controller
         }catch(\Throwable $e) {
             abort(500);
         }
-            return redirect(route('categoryNew'))->with('flash_message', 'カテゴリーを削除しました。');
+            return redirect(route('categoryNew'))->with('flash_message', 'カテゴリを削除しました。');
     }
 }
