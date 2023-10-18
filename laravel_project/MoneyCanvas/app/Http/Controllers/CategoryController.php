@@ -72,7 +72,7 @@ class CategoryController extends Controller
         $category = Category::find($id);
         // カテゴリが使用されている場合は削除できない
         if ($category->record->count() > 0) {
-            return redirect()->route('categoryNew')->with('flash_message', 'このカテゴリに関連する記録が存在するため削除できません');
+            return redirect(route('categoryNew'))->with('flash_message', 'このカテゴリに関連する記録が存在するため削除できません');
         }
         try {
             $category->budget()->delete();

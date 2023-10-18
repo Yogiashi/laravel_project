@@ -92,7 +92,9 @@ trait CustomTrait
             $year = date('Y', strtotime($date));
             $weekNumber = date('W', strtotime($date));
 
+            // 週の始まりを計算
             $weekStartDate = date('Y-m-d', strtotime($year . 'W' . $weekNumber));
+            // 週の終わりを計算
             $weekEndDate = date('Y-m-d', strtotime($year . 'W' . $weekNumber . '7'));
 
             $weekRange = $weekStartDate . ' ～ ' . $weekEndDate;

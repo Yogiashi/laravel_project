@@ -34,7 +34,7 @@ class RecordController extends Controller
         $sum = $income - $spending;
 
         // 支払日一覧を取得
-        $dates = Record::distinct()->orderBy('date', 'desc')->pluck('date')->toArray();
+        $dates = Record::distinct()->orderBy('date', 'desc')->pluck('date');
 
         // 支払日を年毎、月毎、週毎に分ける
         $yearlyDates = $this->getYearlyDates($dates);
@@ -74,7 +74,7 @@ class RecordController extends Controller
     public function new() {
         $user = auth()->id();
         $categories = Category::where('user_id', $user)->get();
-        return view('record.new', ['categories' => $categories]);
+        return view('record.new', compact('categories'));
     }
     
     // 収支の記録
@@ -96,7 +96,7 @@ class RecordController extends Controller
     // 記録詳細
     public function show($id) {
         $record = Record::find($id);
-        return view('record.show', ['record' => $record]);
+        return view('record.show', compact('record'));
     }
 
     // 編集画面
@@ -104,7 +104,7 @@ class RecordController extends Controller
         $user = auth()->id();
         $categories = Category::where('user_id', $user)->get();
         $record = Record::find($id);
-        return view('record.edit', ['record' => $record, 'categories' => $categories]);
+        return view('record.edit', compact('record', 'categories'));
     }
 
     // 記録を更新
