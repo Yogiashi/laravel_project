@@ -8,7 +8,6 @@ use App\Category;
 use App\User;
 use App\Http\Requests\BlogPostRequest;
 use Illuminate\Support\Facades\Auth;
-use App\Jobs\TestJob;
 
 class CategoryController extends Controller
 {
@@ -29,7 +28,14 @@ class CategoryController extends Controller
         $user = auth()->id();
         $inputs = $request->all();
 
-        TestJob::dispatch($user, $inputs);
+        \DB::beginTransaction();
+        try {
+            Category::create($inputs);
+            \DB::commit();
+        }catch(\Throwable $e) {
+            \DB::rollback();
+            abort(500);
+        }
      
         return redirect(route('categoryNew'))->with('flash_message', 'カテゴリを登録しました。');
     }
